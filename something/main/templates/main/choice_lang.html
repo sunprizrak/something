@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div id="choice_lang" class="container">
+        <div class="row">
+            <div class="col d-flex vh-100 justify-content-center align-items-center">
+                <div class="btn-group" role="group" aria-label="choice_lang">
+                    <a href="{% url 'home' %}" class="button me-4">
+                        <span>Language 1</span>
+                    </a>
+                    <a href="{% url 'home' %}" class="button">
+                        <span>Language 2</span>
+                    </a>
+                    <a href="{% url 'home' %}" class="button ms-4">
+                        <span>Language 3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
