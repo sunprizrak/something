@@ -119,3 +119,5 @@ MEDIA_ROOT = (BASE_DIR / 'media')
 AUTH_USER_MODEL = 'custom_user.CustomUser'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+GEOIP_PATH = 'geo/GeoLite2-Country.mmdb'

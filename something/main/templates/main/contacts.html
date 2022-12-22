@@ -8,32 +8,39 @@
         <div class="row">
             <div class="col d-flex vh-100 justify-content-center align-items-center">
                 {% include 'main/messages.html' %}
-                <form id="contacts_form" method="post" class="d-flex w-25 flex-column needs-validation" novalidate>
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        {{ form.email}}
+                <div class="card" id="form_card">
+                    <div class="card-header">
+                        <h2>Contacts</h2>
                     </div>
-                    <div class="mb-3">
-                        {{ form.name }}
+                    <div class="card-body">
+                        <form id="contacts_form" method="post" class="d-flex flex-column needs-validation" novalidate>
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                {{ form.email }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.name }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.phone_number }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.object_name }}
+                            </div>
+                            <div class="mb-3">
+                                {{ form.date }}
+                            </div>
+                            <a class="button align-self-center">
+                                <span>Send</span>
+                            </a>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        {{ form.phone_number }}
-                    </div>
-                    <div class="mb-3">
-                        {{ form.object_name }}
-                    </div>
-                    <div class="mb-3">
-                        {{ form.date }}
-                    </div>
-                    <a onclick="document.getElementById('contacts_form').submit()" class="button align-self-center">
-                        <span>Send</span>
-                    </a>
-                </form>
+                </div>
             </div>
         </div>
     </div>
 {% endblock %}
 
 {% block js %}
-    <script src="{% static 'main/js/bootstrap_forms_validate.js' %}"></script>
+    <script src="{% static 'main/js/forms.js' %}"></script>
 {% endblock %}

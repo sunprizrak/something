@@ -6,7 +6,7 @@ class ContactsForm(forms.ModelForm):
 
     class Meta:
         model = Contacts
-        fields = '__all__'
+        fields = ('email', 'name', 'phone_number', 'object_name', 'date')
         widgets = {
             'email': forms.EmailInput(attrs={
                 'class': 'form-control',

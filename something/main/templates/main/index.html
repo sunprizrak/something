@@ -4,8 +4,8 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row mt-5">
+    <div class="container pb-3">
+        <div class="row mt-3">
             <div class="col d-flex justify-content-end align-items-center">
                 <a href="{% url 'contacts' %}" class="button">
                     <span>Contacts</span>
@@ -13,42 +13,62 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col d-flex justify-content-center align-items-center">
-                <div class="btn-group" role="group" aria-label="product_btn">
-                    <a href="#" class="button me-5">
-                        <span>Lorem ipsum dolor sit. 1</span>
+            <div class="col">
+                <div class="btn-group d-flex justify-content-center" role="group" aria-label="product_btn">
+                    <a href="#" class="button">
+                        <span>Product 1</span>
                     </a>
                     <a href="#" class="button">
-                        <span>Lorem ipsum dolor sit. 2</span>
+                        <span>Product 2</span>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="row mt-1">
+        <div class="row mt-4">
             <div class="col">
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{% static '' %}" class="d-block w-100">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static '' %}" class="d-block w-100">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static '' %}" class="d-block w-100">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{% static 'main/img/gray.jpg' %}" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'main/img/white.jpg' %}" class="d-block w-100">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'main/img/gray2.jpg' %}" class="d-block w-100">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-center mt-4">
             <div class="col-6 d-flex align-items-end flex-column">
-                <div class="mb-auto p-2 bd-highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam dignissimos expedita necessitatibus porro. Ab accusamus aliquam assumenda, autem commodi consequatur corporis eaque fugit id ipsum laboriosam maiores nostrum, numquam perferendis quis quod repellat repellendus sed soluta tenetur! Aspernatur doloribus illum sed. Architecto atque odio recusandae vero. Aliquid architecto autem beatae, cumque deserunt dolore error et, expedita id ipsa iure laborum magni maiores nemo nostrum officiis pariatur porro provident quae rem sed sunt, ullam unde ut vel voluptas voluptate voluptatum.</div>
-                <div class="p-2 bd-highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam dignissimos expedita necessitatibus porro. Ab accusamus aliquam assumenda, autem commodi consequatur corporis eaque fugit id ipsum laboriosam maiores nostrum, numquam perferendis quis quod repellat repellendus sed soluta tenetur! Aspernatur doloribus illum sed. Architecto atque odio recusandae vero. Aliquid architecto autem beatae, cumque deserunt dolore error et, expedita id ipsa iure laborum magni maiores nemo nostrum officiis pariatur porro provident quae rem sed sunt, ullam unde ut vel voluptas voluptate voluptatum.</div>
+                <div class="card">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam dignissimos expedita necessitatibus porro. Ab accusamus aliquam assumenda, autem commodi consequatur corporis eaque fugit id ipsum laboriosam maiores nostrum, numquam perferendis quis quod repellat repellendus sed soluta tenetur! Aspernatur doloribus illum sed. Architecto atque odio recusandae vero. Aliquid architecto autem beatae, cumque deserunt dolore error et, expedita id ipsa iure laborum magni maiores nemo nostrum officiis pariatur porro provident quae rem sed sunt, ullam unde ut vel voluptas voluptate voluptatum.
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam dignissimos expedita necessitatibus porro. Ab accusamus aliquam assumenda, autem commodi consequatur corporis eaque fugit id ipsum laboriosam maiores nostrum, numquam perferendis quis quod repellat repellendus sed soluta tenetur! Aspernatur doloribus illum sed. Architecto atque odio recusandae vero. Aliquid architecto autem beatae, cumque deserunt dolore error et, expedita id ipsa iure laborum magni maiores nemo nostrum officiis pariatur porro provident quae rem sed sunt, ullam unde ut vel voluptas voluptate voluptatum.
+                    </div>
+                </div>
             </div>
             <div class="col-6 d-flex align-items-start flex-column">
-                <div class="mb-auto p-2 bd-highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa debitis, dolore eligendi nihil nisi omnis repellat voluptates voluptatibus? Adipisci animi aperiam consectetur cumque delectus dicta dolor enim excepturi inventore iste labore laboriosam magnam minus mollitia nihil nostrum officiis pariatur possimus praesentium qui quibusdam repellendus sequi tempore totam ut veniam, voluptate voluptatibus. Ab corporis eaque modi optio perspiciatis. A ad alias asperiores aspernatur corporis eveniet ex excepturi harum incidunt ipsum labore nam nemo neque nisi, obcaecati quia repellendus tenetur velit voluptatibus.</div>
-                <div class="p-2 bd-highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ea eaque eum harum iusto minima optio praesentium quaerat quibusdam quo ratione reiciendis, rem voluptates! Ad dolores libero vitae. Aliquid, atque beatae culpa doloribus et exercitationem explicabo fuga laboriosam, libero minus omnis perspiciatis praesentium quis rem repellat sint tempora vero voluptates? Ab accusamus aliquam assumenda atque corporis cupiditate, deleniti harum ipsam modi molestiae odit, officiis optio possimus reprehenderit temporibus unde ut voluptatum! Aliquam architecto at beatae dicta odio praesentium quasi soluta.</div>
+                <div class="card">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam dignissimos expedita necessitatibus porro. Ab accusamus aliquam assumenda, autem commodi consequatur corporis eaque fugit id ipsum laboriosam maiores nostrum, numquam perferendis quis quod repellat repellendus sed soluta tenetur! Aspernatur doloribus illum sed. Architecto atque odio recusandae vero. Aliquid architecto autem beatae, cumque deserunt dolore error et, expedita id ipsa iure laborum magni maiores nemo nostrum officiis pariatur porro provident quae rem sed sunt, ullam unde ut vel voluptas voluptate voluptatum.
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam dignissimos expedita necessitatibus porro. Ab accusamus aliquam assumenda, autem commodi consequatur corporis eaque fugit id ipsum laboriosam maiores nostrum, numquam perferendis quis quod repellat repellendus sed soluta tenetur! Aspernatur doloribus illum sed. Architecto atque odio recusandae vero. Aliquid architecto autem beatae, cumque deserunt dolore error et, expedita id ipsa iure laborum magni maiores nemo nostrum officiis pariatur porro provident quae rem sed sunt, ullam unde ut vel voluptas voluptate voluptatum.
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,30 +1,6 @@
 body {
     background: #fff;
-}
-
-/* Style Button */
-
-.button {
-    display: inline-block;
-
-    -webkit-border-radius: 10px;
-
-    -webkit-box-shadow:
-        0px 3px rgba(128,128,128,1), /* gradient effects */
-        0px 4px rgba(118,118,118,1),
-        0px 5px rgba(108,108,108,1),
-        0px 6px rgba(98,98,98,1),
-        0px 7px rgba(88,88,88,1),
-        0px 8px rgba(78,78,78,1),
-        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
-
-    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
-}
-
-.button span {
-    background-color: #E8E8E8;
-
-    background-image:
+    --main-background-image:
         /* gloss gradient */
         -webkit-gradient(
             linear,
@@ -65,10 +41,107 @@ body {
             color-stop(60%,#D2D2D1),
             color-stop(60%,rgba(255,255,255,0)),
             color-stop(100%,rgba(255,255,255,0)));
+}
 
-        -webkit-box-shadow:
-            0px -1px #fff, /* top highlight */
-            0px 1px 1px #FFFFFF; /* bottom edge */
+/* Scrollbar */
+
+html::-webkit-scrollbar {
+    width: 10px;
+    display: block;
+    background-color: #212529;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image:
+        /* gloss gradient */
+        -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(50%,rgba(255,255,255,0.3)),
+            color-stop(100%,rgba(255,255,255,0.2))),
+
+        /* dark outside gradient */
+        -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0%,rgba(210,210,210,0.3)),
+            color-stop(20%,rgba(210,210,210,0)),
+            color-stop(80%,rgba(210,210,210,0)),
+            color-stop(100%,rgba(210,210,210,0.3))),
+
+        /* light inner gradient */
+        -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0%,rgba(255,255,255,0)),
+            color-stop(20%,rgba(255,255,255,0.5)),
+            color-stop(80%,rgba(255,255,255,0.5)),
+            color-stop(100%,rgba(255,255,255,0))),
+
+        /* diagonal line pattern */
+        -webkit-gradient(
+            linear,
+            0% 100%,
+            100% 0%,
+            color-stop(0%,rgba(255,255,255,0)),
+            color-stop(40%,rgba(255,255,255,0)),
+            color-stop(40%,#D2D2D1),
+            color-stop(60%,#D2D2D1),
+            color-stop(60%,rgba(255,255,255,0)),
+            color-stop(100%,rgba(255,255,255,0)));
+
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+}
+
+/*
+html::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 25vh;
+}
+
+html::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 25vh;
+}
+*/
+
+/* end Scrollbar */
+
+/* Style Button */
+
+.button {
+    display: inline-block;
+
+    -webkit-border-radius: 10px;
+
+    -webkit-box-shadow:
+        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+}
+
+.button span {
+    background-color: #E8E8E8;
+
+    background-image: var(--main-background-image);
+
+    -webkit-box-shadow:
+        0px -1px #fff, /* top highlight */
+        0px 1px 1px #FFFFFF; /* bottom edge */
 
     -webkit-background-size: 100%, 100%, 100%, 4px 4px;
 
@@ -110,8 +183,87 @@ body {
 
 /* End Style Button */
 
+.btn-group[aria-label=choice_lang] a:nth-child(1) {
+    margin-right: 2vw;
+}
+
+.btn-group[aria-label=choice_lang] a:nth-child(3) {
+    margin-left: 2vw;
+}
 
 
 .btn-group[aria-label=choice_lang] a span {
     font-size: 2rem;
 }
+
+.btn-group[aria-label=product_btn] a:nth-child(1) {
+    margin-right: 1vw;
+}
+
+.btn-group[aria-label=product_btn] a:nth-child(2) {
+    margin-left: 1vw;
+}
+
+.carousel-inner {
+    height: 40vh;
+    border-radius: 6px;
+    /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+}
+
+.card {
+    border-radius: 6px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#form_card {
+    width: 40%;
+}
+
+.card-header {
+    background-image: var(--main-background-image);
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+}
+
+.card-body {
+    background-image: var(--main-background-image);
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+}
+
+.alert {
+    z-index: 1000;
+}
+
+/* Mobile */
+
+@media (max-width: 1200px) {
+
+    .btn-group[aria-label=choice_lang] {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .btn-group[aria-label=choice_lang] a:nth-child(1) {
+        margin-right: 0;
+    }
+
+    .btn-group[aria-label=choice_lang] a:nth-child(2) {
+        margin-top: 3vh;
+    }
+
+    .btn-group[aria-label=choice_lang] a:nth-child(3) {
+        margin-top: 3vh;
+        margin-left: 0;
+    }
+
+    .carousel-inner {
+        height: 27vh;
+    }
+
+    #form_card {
+        width: 80%;
+    }
+
+}
+
+/* End mobile */
