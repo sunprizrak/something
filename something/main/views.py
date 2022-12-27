@@ -21,8 +21,8 @@ class ChoiceLanguageView(TemplateView):
     }
 
     def get(self, request, *args, **kwargs):
-        # ip = get_client_ip(request=request)
-        ip = '37.214.28.13'  # '37.214.28.13'
+        ip = get_client_ip(request=request)
+        #ip = '37.214.28.13'  # '37.214.28.13'
         g = GeoIP2()
         user_country = g.country_name(ip)
 
