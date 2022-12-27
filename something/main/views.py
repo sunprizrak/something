@@ -26,8 +26,6 @@ class ChoiceLanguageView(TemplateView):
         g = GeoIP2()
         user_country = g.country_name(ip)
 
-        print(g.country_name(ip))
-
         if user_country in ['Belarus', 'Russia']:
             self.extra_context['choose_language'] = 'Выберите язык'
         elif user_country in ['Montenegro', 'Serbia']:
